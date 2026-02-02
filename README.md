@@ -81,21 +81,14 @@ Performance is evaluated using:
 This setup allows us to evaluate **which frequency components alone are sufficient for discrimination**.
 
 ## Repository Structure
-
+```text
 ├── experiments/
 │   ├── layerwise_spectral/
-│   ├── classifier_dependence/
-│   ├── dataset_dependence/
-│   ├── head_nonlinearity_joint/
-
-│   ├── Effect_of_Head_Nonlinearity_and_Joint_Training/
-
+│   ├── classifier_dep/
+│   ├── dataset_dep/
+│   └── head_nonlin_joint/
 ├── analysis/
-
 ├── figures/
-
 ├── results/
-
 ├── configs/
-
 └── README.md
