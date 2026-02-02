@@ -79,3 +79,23 @@ Performance is evaluated using:
 - (Spectral Content of Feature Maps)
 
 This setup allows us to evaluate **which frequency components alone are sufficient for discrimination**.
+
+## Repository Structure
+
+├── experiments/
+│   ├── layerwise_spectral/
+│   ├── classifier_dependence/
+│   ├── dataset_dependence/
+│   ├── head_nonlinearity_joint/
+
+│   ├── Effect_of_Head_Nonlinearity_and_Joint_Training/
+
+├── analysis/
+
+├── figures/
+
+├── results/
+
+├── configs/
+
+└── README.md
