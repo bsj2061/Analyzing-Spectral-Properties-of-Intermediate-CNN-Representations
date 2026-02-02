@@ -76,6 +76,6 @@ Performance is evaluated using:
 
 - classification accuracy
 - mean ground-truth (GT) rank
-- (Spectral energy distribution of feature maps)
+- (Spectral Content of Feature Maps)
 
 This setup allows us to evaluate **which frequency components alone are sufficient for discrimination**.
