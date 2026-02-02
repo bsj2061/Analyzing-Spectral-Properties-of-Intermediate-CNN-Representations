@@ -81,7 +81,7 @@ Performance is evaluated using:
 This setup allows us to evaluate **which frequency components alone are sufficient for discrimination**.
 
 ## Repository Structure
-```text
+```bash
 ├── experiments/
 │   ├── layerwise_spectral/
 │   ├── classifier_dep/
@@ -92,3 +92,4 @@ This setup allows us to evaluate **which frequency components alone are sufficie
 ├── results/
 ├── configs/
 └── README.md
+```
