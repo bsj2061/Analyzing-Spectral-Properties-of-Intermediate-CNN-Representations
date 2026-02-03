@@ -1,0 +1,26 @@
+defaults:
+  - ../defaults.yaml        
+  - _self_                  
+
+experiment:
+  type: layerwise_spectral
+  target_layers:
+    resnet18: ["layer1", "layer2", "layer3", "layer4"]
+    vit_b16: ["encoder.layers.0", "encoder.layers.1", "encoder.layers.2", "encoder.layers.3", "encoder.layers.4", "encoder.layers.5", "encoder.layers.6", "encoder.layers.7", "encoder.layers.8", "encoder.layers.9", "encoder.layers.10", "encoder.layers.11"]
+
+
+dataset:
+  name: imagenet100
+  subset_per_class: 200 
+
+model:
+  name: resnet18  # or vit_b16
+  pretrained: true
+  include_head: true
+
+transform:
+  input_size: 224
+
+analyzer:
+  num_images: 50
+  batch_size: 64
