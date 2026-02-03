@@ -1,0 +1,32 @@
+seed: 42
+device: cuda                  # cuda, cpu
+num_workers: 4
+pin_memory: true
+
+batch_size: 128
+num_images: 200               # analyzer.run_experiment의 num_images 기본값
+
+logging:
+  level: INFO
+  save_dir: ./results
+
+model:
+  pretrained: true
+  include_head: true          # whether to use the backbone only or the complete model including its head
+
+dataset:
+  name: imagenet100
+  root: ./data/imagenet100
+
+transform:
+  input_size: 224
+
+frequency_bands:
+  "0.0-0.05": [0.0, 0.05]
+  "0.05-0.15": [0.05, 0.15]
+  "0.15-0.3": [0.15, 0.3]
+  "0.3-0.5": [0.3, 0.5]
+  "0.5-0.7": [0.5, 0.7]
+  "0.7-0.9": [0.7, 0.9]
+  "0.9-1.0": [0.9, 1.0]
+        
