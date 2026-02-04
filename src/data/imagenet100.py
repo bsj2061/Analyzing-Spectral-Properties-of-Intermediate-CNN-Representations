@@ -24,15 +24,14 @@ class ImageNet100(BaseDataset):
 
     def _build_class_index(self):
         all_classes = set()
-        dirs = self.train_dirs.extend(self.val_dirs)
-
+        dirs = self.train_dirs + self.val_dirs
+        
         for d in dirs:
             path = os.path.join(self.root, d)
             all_classes.update(
                 sub for sub in os.listdir(path)
                 if os.path.isdir(os.path.join(path, sub))
             )
-
         return {cls: i for i, cls in enumerate(sorted(all_classes))}
 
     def _build_concat_dataset(self):
