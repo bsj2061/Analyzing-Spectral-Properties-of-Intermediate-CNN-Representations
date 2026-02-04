@@ -1,0 +1,16 @@
+name: imagenet100
+root: C:\Users\IRRLab\.cache\kagglehub\datasets\ambityga\imagenet100\versions\8
+shards:
+  TRAIN_DIRS: 
+    - 'train.X1'
+    - 'train.X2'
+    - 'train.X3'
+    - 'train.X4'
+  VAL_DIRS: 
+    - 'val.X'
+
+sampling:
+  subset_per_class: 200          # the maximal number of the samples per class in val set
+
+transform:
+  input_size: 224
