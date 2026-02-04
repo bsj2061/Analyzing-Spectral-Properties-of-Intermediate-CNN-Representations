@@ -1,8 +1,12 @@
 dataset:
   name: imagenet100
-  root: ./data/imagenet100
+  root: C:\Users\IRRLab\.cache\kagglehub\datasets\ambityga\imagenet100\versions\8
+  shards:
+      TRAIN_DIRS: ['train.X1', 'train.X2', 'train.X3', 'train.X4']
+      VAL_DIR: ['val.X']
+
+sampling:
   subset_per_class: 200          # the maximal number of the samples per class in cal set
-  full_loader_batch_size: 128    # using for full dataset loader
 
 transform:
   input_size: 224
