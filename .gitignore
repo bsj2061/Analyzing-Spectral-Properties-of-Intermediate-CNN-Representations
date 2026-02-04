@@ -1,0 +1,6 @@
+src/data/__pycache__/transforms.cpython-310.pyc
+src/data/__pycache__/loader.cpython-310.pyc
+src/data/__pycache__/imagenet100.cpython-310.pyc
+src/data/__pycache__/base.cpython-310.pyc
+src/data/__pycache__/__init__.cpython-310.pyc
+Experiments/layerwise_spectral/__pycache__/main.cpython-310.pyc
