@@ -1,5 +1,5 @@
 import torch
-from data import transforms
+from src.data import transforms
 
 class MasterSpectralAnalyzer:
     def __init__(self, device):
