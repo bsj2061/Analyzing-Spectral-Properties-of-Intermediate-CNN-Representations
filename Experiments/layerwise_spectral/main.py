@@ -1,24 +1,36 @@
 import yaml
 from src.data import *
 from src.utils import *
+import hydra
+from omegaconf import DictConfig, OmegaConf
 
-def main():
-    
-    
-    with open('./configs/experiments/layerwise_spectral.yaml') as f:
-        exp_cfg = yaml.load(f, Loader=yaml.SafeLoader)
+@hydra.main(version_base=None, config_path="../../configs", config_name="defaults")
+def main(cfg: DictConfig):
+
+    device = cfg.device
+
+    seed = cfg.seed
+    set_seed(seed)
+
+    data_cfg = cfg.dataset
+    model_cfg = cfg.model
+    exp_cfg = cfg.experiment
+    loader_cfg = cfg.dataloader
         
-    with open('./configs/data/imagenet100.yaml') as f:
-        data_cfg = yaml.load(f, Loader=yaml.SafeLoader)
-    
     ds = imagenet100.ImageNet100(
-        root=data_cfg["data"]["root"],
+        root=data_cfg["root"],
         split="train",
-        train_dirs=data_cfg["data"]["shards"]["TRAIN_DIRS"],
-        val_dirs=data_cfg["data"]["shards"]["VAL_DIRS"],
+        train_dirs=data_cfg["shards"]["TRAIN_DIRS"],
+        val_dirs=data_cfg["shards"]["VAL_DIRS"],
         transform=transforms.get_transforms(dataset_name="imagenet100")
     )
     
+    loader = build_loader(ds, 
+                          batch_size=loader_cfg["batch_size"],
+                          shuffle=loader_cfg["shuffle"],
+                          num_workers=loader_cfg["num_workers"],
+                          pin_memory=loader_cfg["pin_memory"]
+                          )
     
 if __name__=="__main__":
     main()    
