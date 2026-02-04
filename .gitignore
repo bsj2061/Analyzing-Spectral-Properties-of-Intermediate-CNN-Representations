@@ -4,3 +4,74 @@ src/data/__pycache__/imagenet100.cpython-310.pyc
 src/data/__pycache__/base.cpython-310.pyc
 src/data/__pycache__/__init__.cpython-310.pyc
 Experiments/layerwise_spectral/__pycache__/main.cpython-310.pyc
+outputs/2026-02-04/17-10-54/main.log
+src/utils/__pycache__/seed.cpython-310.pyc
+src/utils/__pycache__/device.cpython-310.pyc
+src/utils/__pycache__/__init__.cpython-310.pyc
+outputs/2026-02-04/17-26-02/main.log
+outputs/2026-02-04/17-17-25/main.log
+outputs/2026-02-04/17-16-59/main.log
+outputs/2026-02-04/17-15-46/main.log
+####################################
+# Python
+####################################
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.eggs/
+.env
+.venv
+venv/
+ENV/
+
+####################################
+# Jupyter
+####################################
+.ipynb_checkpoints/
+
+####################################
+# Hydra
+####################################
+outputs/
+multirun/
+.hydra/
+
+####################################
+# Experiments / Results
+####################################
+results/
+logs/
+checkpoints/
+runs/
+
+####################################
+# Data (local only)
+####################################
+data/
+datasets/
+imagenet*/
+*.zip
+*.tar
+*.tar.gz
+
+####################################
+# OS / Editor
+####################################
+.DS_Store
+Thumbs.db
+
+####################################
+# VSCode / IDE
+####################################
+.vscode/
+.idea/
+
+####################################
+# Temporary / Cache
+####################################
+*.log
+*.tmp
+*.cache
