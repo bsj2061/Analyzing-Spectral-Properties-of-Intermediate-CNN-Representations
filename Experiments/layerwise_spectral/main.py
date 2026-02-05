@@ -29,8 +29,12 @@ def main(cfg: DictConfig):
                           batch_size=loader_cfg["batch_size"],
                           shuffle=loader_cfg["shuffle"],
                           num_workers=loader_cfg["num_workers"],
-                          pin_memory=loader_cfg["pin_memory"]
+                          pin_memory=loader_cfg["pin_memory"],
+                          persistent_workers=loader_cfg["persistent_workers"],
+                          prefetch_factor=loader_cfg["prefetch_factor"]
                           )
+    
+    
     
 if __name__=="__main__":
     main()    
