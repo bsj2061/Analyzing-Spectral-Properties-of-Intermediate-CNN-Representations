@@ -66,4 +66,4 @@ def get_backbone(name: str, pretrained: bool = True, include_head: bool = True) 
     }
     if name.lower() not in registry:
         raise ValueError(f"Unknown backbone: {name}")
-    return registry[name.lower()](pretrained=pretrained)
+    return registry[name.lower()](pretrained=pretrained, include_head=include_head)

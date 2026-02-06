@@ -7,7 +7,7 @@ from omegaconf import DictConfig, OmegaConf
 @hydra.main(version_base=None, config_path="../../configs", config_name="defaults")
 def main(cfg: DictConfig):
 
-    device = cfg.device
+    device = get_device(cfg.device)
 
     seed = cfg.seed
     set_seed(seed)
